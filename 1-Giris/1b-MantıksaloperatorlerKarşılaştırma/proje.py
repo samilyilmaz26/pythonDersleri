@@ -1,0 +1,23 @@
+ 
+t =  True
+print(type(t))
+t2 = False
+print(type(t2))
+print("*******************")
+print(bool(12.4))
+print(bool(0.0))
+print(bool(121212))
+print(bool(-1))
+print("*******************")
+print(1 > 2)  
+print(1 < 2)
+print("Ali" < "zeynep" )
+print("Ahmet" == "Ahmet")
+print("Mehmet" == "Ali")
+print("Mehmet" != "Ali")
+print("*******************")
+print("Ali" < "Zeynep" ) 
+print(2 < 3)
+print(54 >= 54)
+print(78 > 27)
+print(34 <= 45)

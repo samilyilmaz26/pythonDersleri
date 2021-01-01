@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block render %}
+<h3>Personel </h3>
+<hr>
+<a class="btn btn-primary" href="/personel/personeladd">Şehir Ekle </a>
+{% if personels %}
+<div class="col-md-5">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Sil</th>
+                <th>Güncelle </th>
+                
+            {% for el in personels %}
+            </tr>
+               <td><a href="/personel/personeldetail/{{el.id}}" >{{el.id}}</a> </td>
+               <td>{{el.name}}</td>
+               <td>{{el.surname}}</td>
+               <td> <a href="/personel/personeldelete/{{el.id}}">Sil</a> </td>
+               <td> <a href="/personel/personeledit/{{el.id}}">Güncelle</a> </td>
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+</div>
+
+
+{% else %}
+<div>
+    <p>Gösterilecek Veri Yok</p>
+</div>
+{% endif %}
+
+
+
+{% endblock %}

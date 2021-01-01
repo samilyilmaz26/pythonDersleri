@@ -1,0 +1,11 @@
+{%extends "layout.html"%}
+{%block page%}
+
+<h3>Şehir Detayları</h3>
+<hr>
+id  : {{city.id}}
+<br>
+adı : {{city.name}}
+<br>
+Açıklama  : {{city.description|safe}}
+{%endblock page%}

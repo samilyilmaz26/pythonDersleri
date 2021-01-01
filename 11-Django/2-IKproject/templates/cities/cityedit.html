@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block render %}
+
+{% load crispy_forms_tags %}
+ <h3>Şehir Güncelleme  </h3>
+ <div class="row">
+
+    <div class="col-md-6 offset-md-3">
+        <h3>Şehir Ekleme</h3>
+        <hr>
+        <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
+            {{ form.media }}
+            {{form|crispy}}
+            <button class="btn btn-success" type="submit">Güncelle</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

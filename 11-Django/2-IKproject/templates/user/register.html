@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+{% block render %} 
+{% load crispy_forms_tags %}
+
+<form method="POST">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3>Register</h3>
+            {% csrf_token %} {{form|crispy}}
+
+            <button class="btn btn-primary" type="submit">Kayıt</button>
+        </div>
+    </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block render %}
+<form method="POST">
+    {% csrf_token %}
+<div class="col-md-5" >
+ <h3>Register </h3>
+ {{ form.non_field_errors }}
+<div class="fieldWrapper "  >
+    {{ form.username.errors }}
+    <label for="{{ form.username.id_for_label }}" >Kullanıcı Adı :</label>
+    {{ form.password }}
+</div>
+<div class="fieldWrapper">
+    {{ form.password.errors }}
+    <label for="{{ form.password.id_for_label }}">Şifre  :</label>
+    {{ form.password }}
+</div>
+<div class="fieldWrapper">
+    {{ form.confirm.errors }}
+    <label for="{{ form.confirm.id_for_label }}">Şifre Tekrar :</label>
+    {{ form.confirm }}
+</div>
+<button class="btn btn-primary" type="submit">Kayıt</button>
+</div>
+</form>
+{% endblock %}

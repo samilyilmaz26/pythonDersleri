@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block render %}
+ <h3>Şehir Detay</h3>
+ <hr>
+ {{city.id}}
+ <br>
+ {{city.name}}
+ <br>
+ {{city.description |safe}}
+ <a class="btn btn-primary" href="/personel/cities">Listeye Geri Dön</a>
+{% endblock %}

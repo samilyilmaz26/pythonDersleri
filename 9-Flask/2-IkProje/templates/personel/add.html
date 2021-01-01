@@ -1,0 +1,26 @@
+{%extends "layout.html"%} {%block page%}
+
+<h3>Personel Ekleme ...</h3>
+
+{% from "/includes/formhelpers.html" import render_field %}
+<form method="POST">
+  <div class="col-md-7">
+    {{ render_field(form.name , class ="form-control") }} {{
+    render_field(form.surname , class ="form-control") }} {{
+    render_field(form.salary , class ="form-control") }}
+    <label for="birthdate">Doğum Tarihi</label>
+    <input type="date" name="birthdate" class="form-control" ) />
+    
+    
+    <label for="cars">Şehir</label>
+    <select name="cityid" id="cityid" , class="form-control">
+      {% for c in cities %}
+              <option value="{{c.id}}">{{c.name}} </option>
+      {% endfor %}
+    </select>
+
+    <p><input type="submit" class="btn btn-primary" value="Yeni Kayıt" /></p>
+  </div>
+</form>
+
+{%endblock page%}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block render %}
+ <h3>Makaleler</h3>
+ <hr>
+ 
+ {% if articles %}
+ {% for el in articles %}
+ <div class="col-md-5">
+ <ul class="list-group">
+     <a href="/article/detail/{{el.id}}"><li class="list-group-item list-group-item-danger">{{el.title}}</li></a>
+  </ul>  
+</div>
+ {% endfor %} 
+ 
+ {% else %}
+ <div>
+     <p>Gösterilecek Makale Yok</p>
+ </div>
+ {% endif %}
+ 
+
+ 
+{% endblock %}

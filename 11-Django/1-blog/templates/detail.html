@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block render %}
+<h3>Makale Detayları</h3>
+<hr />
+<div class="col-md-5">
+  <label>id</label>
+  <input type="text" value="{{article.id}} " class="form-control" />
+  <label>Başlık</label>
+  <input type="text" value="{{article.title}} " class="form-control" />
+  <label>İçerik</label>
+  <p >{{article.content|safe}} </p>
+  <label>Tarih</label>
+  <p>{{article.created_date}}</p>
+</div>
+<a class="btn btn-danger" href="/article/articles">Listeye Geri Dön</a>
+{% endblock %}

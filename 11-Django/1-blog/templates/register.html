@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block render %}
+<!--  <h3>Kayıt Olma Sayfası</h3>
+ <hr>
+ {% load crispy_forms_tags %}
+ <div class="row" >
+    <div class="col-md-6 offset-3">
+<form method="POST">
+   {% csrf_token %}
+   {{form|crispy}}
+   <button class="btn btn-primary" type="submit">Kayıt Ol</button>
+</form>
+</div>
+</div> -->
+{% load crispy_forms_tags %}
+<div class="row">
+
+    <div class="col-md-6 offset-md-3">
+        <h3>Kayıt </h3>
+        <hr>
+        <form method="POST"> {% csrf_token %}
+            {{form|crispy}}
+            <button class="btn btn-primary" type="submit">Giriş</button>
+        </form>
+    </div>
+</div>
+ 
+{% endblock %}

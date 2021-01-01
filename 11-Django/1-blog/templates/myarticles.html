@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block render %}
+<h3>Makalelerim</h3>
+<hr />
+{% if request.user %}
+<small>Hoşgeldiniz {{request.user.username}}</small>
+{% endif %} {% if articles %}
+<a class="btn btn-primary" href="/article/add"> Makele Ekle </a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Başlık</th>
+      <th scope="col">Tarih</th>
+      <th scope="col">Güncelle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for el in articles %}
+    <tr >
+      <th scope="row"><a href="/article/detail/{{el.id}}">{{el.id}}</a></th>
+      <td>{{el.title}}</td>
+      <td>{{el.created_date}}</td>
+      <td><a class="btn btn-success" href="/article/update/{{el.id}}">Güncelle</a></td>
+      <td><a class="btn btn-danger" href="/article/delete/{{el.id}}">Sil</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%else %}
+<p>Gösterilecek makale yok</p>
+{% endif %} {% endblock %}

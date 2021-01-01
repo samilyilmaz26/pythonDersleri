@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block render %}
+
+{% load crispy_forms_tags %}
+
+ <div class="row">
+
+    <div class="col-md-6 offset-md-3 form-group" >
+        <h3>Personel Ekleme / Güncelleme  </h3>
+        <hr>
+        {{birthdate}}
+        <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
+            {{form|crispy}}
+            
+            <label>Doğum Tarihi</label>
+            <input type="date" name = "birthdate" value="{{birthdate}}"  >
+            <br>
+            <button class="btn btn-success" type="submit">Ok</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
