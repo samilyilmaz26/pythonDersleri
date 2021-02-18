@@ -32,11 +32,17 @@ Bracket Pair Colorizer
 File Preferences seçilip:
 Sağ üst köşedeki kağıt tklanır
 Sözlük içi şu şekilde düzenlenir
+ {
     "files.autoSave": "afterDelay",
     "files.associations": {"*.html": "html"},
     "emmet.includeLanguages": {"django-html": "html"},
 
-    "emmet.triggerExpansionOnTab": true
+    "emmet.triggerExpansionOnTab": true,
+    "window.zoomLevel": 1,
+    "workbench.editorAssociations": [],
+    "jupyter.interactiveWindowMode": "perFile",
+    "liveServer.settings.donotShowInfoMsg": true
+}
 --------------------------Pyhon Sunucu Çalıştırma---------------------------------------
  python manage.py runserver
 ----------------------SQLite yükleme----------------------------------------------------
